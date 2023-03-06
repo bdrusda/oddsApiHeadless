@@ -23,13 +23,13 @@ function createRenderer(deviceInfo, gameInfo) {
 	const width = deviceInfo.width;
 	const height = deviceInfo.height;
 
-	console.log(`Creating renderer ${width}x${height} ${MAX_FPS}fps`);
-
 	////////////////////////////////////////////////
 	//init a 16 rows  by 16 cols led matrix
 	//default hardware mapping is 'regular', could be 'adafruit-hat-pwm' ect
-	var matrix = new LedMatrix(width, width);
-	matrix.fill(255, 50, 100);
+	var matrix = new LedMatrix(width, height);
+	console.log(`created new matrix with dimensions ${width} ${height}'`);
+	matrix.fill(81, 92, 108);
+	console.log(`filled matrix with green`);
 	matrix.setPixel(0, 0, 0, 50, 255);
 	matrix.update();
 	////////////////////////////////////////////////
