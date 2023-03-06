@@ -29,9 +29,11 @@ function createRenderer(deviceInfo, gameInfo) {
 	var matrix = new LedMatrix(width, height);
 	console.log(`created new matrix with dimensions ${width} ${height}'`);
 	matrix.fill(81, 92, 108);
-	console.log(`filled matrix with green`);
-	matrix.setPixel(0, 0, 0, 50, 255);
-	matrix.update();
+	while (true) {
+		console.log(`filled matrix with blue`);
+		matrix.setPixel(0, 0, 0, 50, 255);
+		matrix.update();
+	}
 	////////////////////////////////////////////////
 
 	//setInterval(banner, 75 / interval, ctx, gameData, matrix);
