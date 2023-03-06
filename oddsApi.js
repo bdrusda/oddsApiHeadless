@@ -27,12 +27,14 @@ function createRenderer(deviceInfo, gameInfo) {
 	//init a 16 rows  by 16 cols led matrix
 	//default hardware mapping is 'regular', could be 'adafruit-hat-pwm' ect
 	var matrix = new LedMatrix(width, height);
-	console.log(`created new matrix with dimensions ${width} ${height}'`);
-	matrix.fill(81, 92, 108);
+	console.log(`created new matrix with dimensions ${width} ${height}`);
 	while (true) {
+		matrix.fill(81, 92, 108);
 		console.log(`filled matrix with blue`);
 		matrix.setPixel(0, 0, 0, 50, 255);
+		console.log('set pixel');
 		matrix.update();
+		console.log('updated');
 	}
 	////////////////////////////////////////////////
 
